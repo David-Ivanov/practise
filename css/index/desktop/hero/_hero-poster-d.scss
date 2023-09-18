@@ -1,0 +1,58 @@
+.hero-poster {
+    &-box {
+        width: 416px;
+
+        border-radius: 0px 0px 5px 5px;
+
+        background-color: rgba(213, 98, 29, 0.1);
+    }
+
+    // buttons
+
+    &-btn-list {
+        display: flex;
+    }
+
+    &-btn-item {
+        height: 40px;
+        width: 50%;
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+
+        padding-bottom: 7px;
+
+        width: 100%;
+        height: 100%;
+
+        font-family: $second-font;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        border: none;
+        border-radius: 5px 5px 0px 0px;
+
+        background-color: inherit;
+    }
+
+    &-btn:focus {
+        background-color: rgba(213, 98, 29, 0.05);
+    }
+
+    // images
+
+    &-img-list {
+        display: flex;
+        gap: 26px;
+        flex-wrap: wrap;
+
+        padding: 38px 35px;
+    }
+
+    &-img-item {
+        width: calc((100% - 26px) / 2);
+    }
+}

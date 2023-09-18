@@ -1,0 +1,20 @@
+.header {
+    &-btn {
+        display: block;
+
+        padding: 15px 30px;
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        @extend %hover;
+        @extend %border;
+
+        background-color: transparent;
+    }
+
+    &-btn:hover,
+    &-btn:focus {
+        opacity: 0.7;
+    }
+}

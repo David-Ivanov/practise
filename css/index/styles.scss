@@ -1,0 +1,18 @@
+// utility
+
+@import "../utility/base";
+@import "../utility/variables";
+
+// desktop
+
+// header
+
+@import "../common/desktop/header/header-d";
+@import "../common/desktop/header/header-nav-d";
+@import "../common/desktop/header/header-btn-d";
+
+// hero
+
+@import "./desktop/hero/hero-d";
+@import "./desktop/hero/hero-left-d";
+@import "./desktop/hero/hero-poster-d";

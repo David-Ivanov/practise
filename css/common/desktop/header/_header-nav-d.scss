@@ -1,0 +1,59 @@
+.header {
+
+    &-nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &-logo {
+        margin-right: 211px;
+    }
+
+    &-nav-list {
+        display: flex;
+        gap: 30px;
+
+        margin-right: 189px;
+    }
+
+    &-nav-item {
+        position: relative;
+
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    &-nav-link {
+        @extend %hover;
+    }
+
+    &-nav-item:hover &-nav-link,
+    &-nav-item:focus &-nav-link {
+        opacity: 0.7;
+    }
+
+    &-nav-item::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 4px;
+
+        transform: scaleX(0);
+        transform-origin: left;
+        opacity: 1;
+        transition: transform 250ms ease-in;
+
+        border-radius: 2px;
+        background-color: $accent-color;
+
+    }
+
+    &-nav-item:hover::after,
+    &-nav-item:focus::after {
+        transform: scaleX(1);
+    }
+}

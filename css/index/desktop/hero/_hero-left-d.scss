@@ -1,0 +1,37 @@
+.hero {
+    &-left-box {
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+        justify-content: end;
+
+        width: 856px;
+        height: 540px;
+
+        padding: 45px 60px;
+
+        background-image: url(../../images/index/hero/hero-main.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: transparent;
+
+        @media (min-resolution: 192dpi) {
+            background-image: url(../../images/index/hero/hero-main@2x.jpg);
+        }
+    }
+
+    &-inscription {
+        font-size: 18px;
+        width: max-content;
+
+        @extend %inscription;
+    }
+
+    &-title {
+        width: 623px;
+
+        font-family: $second-font;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+}

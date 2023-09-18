@@ -1,0 +1,28 @@
+$primary-color: #FFFFFF;
+$accent-color: #D5621D;
+
+$second-font: 'REM', sans-serif;
+
+
+%border {
+    border-radius: 5px;
+    border: 2px solid var(--accent, #D5621D);
+}
+
+%inscription {
+    padding: 10px 20px;
+
+    font-family: $second-font;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: #210E09;
+}
+
+%hover {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+}
