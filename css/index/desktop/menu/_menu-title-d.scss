@@ -1,0 +1,20 @@
+.menu {
+    &-inscription {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+
+        @extend %inscription;
+    }
+
+    &-title {
+        margin-bottom: 80px;
+
+        font-family: $second-font;
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+}

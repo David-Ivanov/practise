@@ -1,0 +1,55 @@
+.menu {
+    &-arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 50px;
+        min-width: 50px;
+
+        @extend %hover;
+
+        border: none;
+        border-radius: 5px;
+        background-color: $accent-color;
+    }
+
+    &-arrow:hover {
+        opacity: 0.7;
+    }
+
+    &-icon {
+        fill: $primary-color;
+    }
+
+    &-icon-right {
+        transform: rotate(180deg);
+    }
+
+    &-link {
+        display: block;
+
+        width: 171px;
+
+        margin-right: auto;
+        margin-left: auto;
+
+        padding: 15px 30px;
+
+        font-family: $second-font;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        @extend %hover;
+
+        border-radius: 5px;
+        background-color: $accent-color;
+    }
+
+    &-link:hover,
+    &-link:focus {
+        opacity: 0.7;
+    }
+}

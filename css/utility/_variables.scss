@@ -10,6 +10,8 @@ $second-font: 'REM', sans-serif;
 }
 
 %inscription {
+    width: max-content;
+
     padding: 10px 20px;
 
     font-family: $second-font;

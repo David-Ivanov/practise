@@ -1,0 +1,51 @@
+.benefits {
+    &-box {
+        flex-grow: 1;
+    }
+
+    &-inscription {
+        @extend %inscription;
+
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+    }
+
+    &-subtitle {
+        margin-bottom: 35px;
+
+        font-family: $second-font;
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        text-align: center;
+    }
+
+    &-text-list {
+        margin-bottom: 35px;
+    }
+
+    &-text {
+        text-align: center;
+    }
+
+    &-text:not(:last-child) {
+        margin-bottom: 23px;
+    }
+
+    &-link {
+        display: block;
+
+        width: fit-content;
+
+        margin-right: auto;
+        margin-left: auto;
+        padding: 15px 30px;
+
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+        @extend %border;
+    }
+}

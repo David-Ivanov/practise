@@ -50,12 +50,28 @@ img {
   color: #FFFFFF;
 }
 
-.header-btn {
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.footer-info-list, .techrider-artists-subitem, .benefits-link, .menu-price, .header-btn {
   border-radius: 5px;
   border: 2px solid var(--accent, #D5621D);
 }
 
-.hero-inscription {
+.footer-inscription, .techrider-inscription, .benefits-inscription, .menu-inscription, .hero-inscription {
+  width: -moz-max-content;
+  width: max-content;
   padding: 10px 20px;
   font-family: "REM", sans-serif;
   font-weight: 700;
@@ -66,7 +82,7 @@ img {
   color: #210E09;
 }
 
-.header-btn, .header-nav-link {
+.techrider-artists-subitem, .menu-link, .menu-arrow, .header-btn, .header-nav-link {
   opacity: 1;
   transition: opacity 250ms ease-in;
 }
@@ -157,8 +173,6 @@ img {
 }
 .hero-inscription {
   font-size: 18px;
-  width: -moz-max-content;
-  width: max-content;
 }
 .hero-title {
   width: 623px;
@@ -204,4 +218,451 @@ img {
 }
 .hero-poster-img-item {
   width: calc((100% - 26px) / 2);
+}
+
+.menu {
+  margin-bottom: 150px;
+}
+
+.menu-inscription {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+.menu-title {
+  margin-bottom: 80px;
+  font-family: "REM", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@keyframes top {
+  0% {
+    transform: scaleX(0);
+  }
+  20% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes right {
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes bottom {
+  20% {
+    transform: scaleX(0.3);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes left {
+  50% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.menu-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 96px;
+}
+.menu-list {
+  display: flex;
+  row-gap: 57px;
+  -moz-column-gap: 104px;
+       column-gap: 104px;
+  flex-wrap: wrap;
+}
+.menu-item {
+  display: flex;
+  width: calc((100% - 104px) / 2);
+}
+.menu-img {
+  width: 110px;
+  margin-right: 23px;
+}
+.menu-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: calc(100% - 135px);
+  height: 110px;
+  padding: 6px;
+}
+.menu-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  background-color: #D5621D;
+}
+.menu-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  background-color: #D5621D;
+}
+.menu-item:hover .menu-wrapper::after {
+  animation: right 250ms linear 350ms;
+}
+.menu-item:hover .menu-wrapper::before {
+  animation: left 250ms linear 950ms;
+}
+.menu-wrapper-animation-top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-color: #D5621D;
+}
+.menu-item:hover .menu-wrapper-animation-top {
+  animation: top 500ms linear;
+}
+.menu-wrapper-animation-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: #D5621D;
+}
+.menu-item:hover .menu-wrapper-animation-bottom {
+  animation: bottom 500ms linear 600ms;
+}
+.menu-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.menu-subtitle {
+  font-family: "REM", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.menu-price {
+  padding: 6px 20px 4px;
+  font-family: "REM", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.menu-weight {
+  margin-bottom: 6px;
+  color: #D5621D;
+}
+
+.menu-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  min-width: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #D5621D;
+}
+.menu-arrow:hover {
+  opacity: 0.7;
+}
+.menu-icon {
+  fill: #FFFFFF;
+}
+.menu-icon-right {
+  transform: rotate(180deg);
+}
+.menu-link {
+  display: block;
+  width: 171px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 30px;
+  font-family: "REM", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #D5621D;
+}
+.menu-link:hover, .menu-link:focus {
+  opacity: 0.7;
+}
+
+.benefits {
+  margin-bottom: 150px;
+}
+.benefits-container {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits-box {
+  flex-grow: 1;
+}
+.benefits-inscription {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+.benefits-subtitle {
+  margin-bottom: 35px;
+  font-family: "REM", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.benefits-text-list {
+  margin-bottom: 35px;
+}
+.benefits-text {
+  text-align: center;
+}
+.benefits-text:not(:last-child) {
+  margin-bottom: 23px;
+}
+.benefits-link {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 15px 30px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.techrider {
+  margin-bottom: 150px;
+}
+.techrider-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.techrider-inscription {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+.techrider-title {
+  margin-bottom: 80px;
+  font-family: "REM", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.techrider-catalog-item {
+  position: relative;
+  overflow: hidden;
+  width: 526px;
+  height: 67px;
+  transition: background-color 250ms linear;
+  border-radius: 5px;
+  background-color: rgba(213, 98, 29, 0.1);
+}
+.techrider-catalog-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #210E09;
+}
+.techrider-catalog-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.techrider-catalog-item:hover, .techrider-catalog-item:focus {
+  background-color: rgba(213, 98, 29, 0.5);
+}
+.techrider-catalog-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 40px;
+  background-color: transparent;
+  border: none;
+}
+.techrider-catalog-subtitle {
+  font-family: "REM", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.techrider-catalog-sublist {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 161px;
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  border-radius: 0 0 5px 5px;
+  background-color: #D5621D;
+}
+.techrider-catalog-subitem {
+  display: flex;
+  align-items: center;
+}
+.techrider-catalog-subtext::before {
+  content: "";
+  display: inline-flex;
+  width: 5px;
+  height: 5px;
+  margin-right: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.techrider-artists-box {
+  width: 421px;
+}
+.techrider-artists-subtitle {
+  margin-bottom: 50px;
+  font-family: "REM", sans-serif;
+  font-size: 32px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.techrider-artists-list {
+  display: flex;
+  gap: 24px;
+}
+.techrider-artists-img {
+  width: 196px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+.techrider-artists-name {
+  margin-bottom: 25px;
+  font-family: "REM", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.techrider-artists-sublist {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.techrider-artists-subitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.techrider-artists-subitem:hover {
+  opacity: 0.7;
+}
+.techrider-artists-link {
+  line-height: 0;
+}
+
+.footer-info-box {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-inscription {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+.footer-title {
+  margin-bottom: 80px;
+  font-family: "REM", sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer-info-list {
+  width: 416px;
+  padding: 50px;
+  margin-bottom: 100px;
+  background-color: rgba(213, 98, 29, 0.1);
+}
+.footer-info-item:not(:last-child) {
+  margin-bottom: 35px;
+}
+.footer-info-item:nth-child(3)::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  opacity: 0.5;
+  background-color: #FFFFFF;
+}
+.footer-info-subtitle {
+  margin-bottom: 20px;
+  font-family: "REM", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-info-map {
+  max-width: 856px;
+}
+
+.footer-copyrite {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  opacity: 0.5;
+  border-top: 1px solid #FFFFFF;
 }/*# sourceMappingURL=styles.css.map */

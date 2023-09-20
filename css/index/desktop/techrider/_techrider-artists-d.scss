@@ -1,0 +1,67 @@
+.techrider-artists {
+    &-box {
+        width: 421px;
+    }
+
+    &-subtitle {
+        margin-bottom: 50px;
+
+        font-family: $second-font;
+        font-size: 32px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    &-img {
+        width: 196px;
+
+        margin-bottom: 30px;
+
+        border-radius: 5px;
+    }
+
+    &-name {
+        margin-bottom: 25px;
+
+        font-family: $second-font;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-sublist {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &-subitem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 40px;
+        height: 40px;
+
+        @extend %border;
+        @extend %hover;
+    }
+
+    &-subitem:hover {
+        opacity: 0.7;
+    }
+
+    &-link {
+        line-height: 0;
+    }
+}
